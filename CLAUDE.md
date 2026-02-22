@@ -4,10 +4,9 @@
 
 **AI-BankApp-DevOps** — Spring Boot banking app used as a base for learning end-to-end DevOps.
 
-## Repositories
+## Repository
 
-- **Old (don't touch):** `https://github.com/LondheShubham153/Springboot-BankApp.git` (origin)
-- **New:** `git@github.com:TrainWithShubham/AI-BankApp-DevOps.git` (new-origin)
+- **Origin:** `git@github.com:TrainWithShubham/AI-BankApp-DevOps.git`
 
 ## Branch Structure
 
@@ -40,7 +39,7 @@ Each branch builds on the previous. See `ROADMAP.md` for the full checklist.
 - No Lombok — plain Java getters/setters
 - Constructor injection everywhere (no `@Autowired` on fields)
 - No `Co-Authored-By` in commits — user wants all commits to appear as theirs
-- Don't push to `origin` (old repo) — only push to `new-origin`
+- Push to `origin` (TrainWithShubham/AI-BankApp-DevOps)
 - ROADMAP.md checkboxes track progress per phase/branch
 
 ## Docker
