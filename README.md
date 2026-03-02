@@ -45,6 +45,7 @@ A robust, containerized banking application built on Spring Boot 3 and Java 21. 
 
 1. Clone the repository and navigate to the root directory.
 2. Execute the following command to start the application and its dependencies:
+
    ```bash
    docker-compose up -d
    ```
@@ -66,10 +67,12 @@ To run the application locally without Docker, ensure the following components a
 1. **Database Configuration**: Create a MySQL database named `bankappdb`.
 2. **Configuration**: Update `src/main/resources/application.properties` with your MySQL credentials.
 3. **Initialize AI Model**:
+
    ```bash
    ollama run tinyllama
    ```
 4. **Build and Execute**:
+
    ```bash
    ./mvnw spring-boot:run
    ```
@@ -84,16 +87,6 @@ The banking assistant provides personalized financial support by analyzing the f
 - Basic account metadata
 
 This integration allows the assistant to provide precise answers regarding spending habits, recent activity, and account status.
-
----
-
-## Observability and Management
-
-The application exposes the following management endpoints for monitoring:
-
-- **Health Status**: `http://localhost:8080/actuator/health`
-- **Application Metrics**: `http://localhost:8080/actuator/metrics`
-- **Prometheus Metrics**: `http://localhost:8080/actuator/prometheus`
 
 ---
 
@@ -118,7 +111,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <div align="center">
 
-If you find this repository helpful, don't forget to give it a Star!
+⭐ If you find this repository helpful, don't forget to give it a Star ⭐!
 
 **Happy Learning!**
 
