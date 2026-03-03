@@ -251,22 +251,31 @@ Configure the following Action Secrets within your GitHub repository settings:
 
 > **Note**: The `NVD_API_KEY` raises the NVD API rate limit from ~5 requests/30s to 50 requests/30s, reducing the OWASP Dependency Check scan time from 30+ minutes to under 8 minutes. Without it the SCA job will time out.
 
-##### Obtaining the NVD API Key
+#### Obtaining the NVD API Key
 
 **Step 1: Request the API Key**
 - Go to [https://nvd.nist.gov/developers/request-an-api-key](https://nvd.nist.gov/developers/request-an-api-key).
-- Enter your name, email address, and organization.
-- Click **Submit**.
+- Enter your `Organzation name`, `email address`, and select `organization type`.
+- Accept **Terms of Use** and Click **Submit**.
+
+   ![request](screenshots/22.png)
 
 **Step 2: Activate the API Key**
 - Check your email inbox for a message from `nvd-noreply@nist.gov`.
+
+   ![email](screenshots/25.png)
+
 - Click the **activation link** in the email.
 - Enter `UUID` provided in email and Enter `Email` to activate
-- The link confirms your key and marks it as active.
+- The link confirms your key and marks it as active.  
+
+   ![api-activate](screenshots/23.png)
 
 **Step 3: Get the API Key**
-- After clicking the activation link, the page will display your API key.
+- After clicking the activation link, the page will generate your API key.
 - Copy and save it securely.
+
+   ![api-key](screenshots/24.png)
 
 **Step 4: Add as GitHub Secret**
 - Go to your repository on GitHub.
