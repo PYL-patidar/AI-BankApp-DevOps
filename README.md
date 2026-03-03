@@ -300,7 +300,7 @@ The DevSecOps lifecycle is orchestrated through the [DevSecOps Main Pipeline](.g
 | 4 | `image_scan` | Trivy | **Enforced**: Scans Docker image layers. Fails on any High/Critical CVE. |
 | 5 | `push_to_ecr` | Amazon ECR | Pushes the verified image to AWS ECR using OIDC. |
 | 6 | `deploy` | SSH / Docker Compose | Fetches secrets from AWS Secrets Manager and recreates the container. |
-| 7 | `dast` | OWASP ZAP | **Comprehensive**: Dynamic, automated web scan that interacts with the live application to detect runtime vulnerabilities. |
+| 7 | `dast` | OWASP ZAP | **Audit Mode**: Comprehensive scan that reports findings as artifacts, but does not block the pipeline. |
 
 All scan reports (OWASP, Trivy, ZAP) are uploaded as downloadable **Artifacts** in each GitHub Actions run.
 
