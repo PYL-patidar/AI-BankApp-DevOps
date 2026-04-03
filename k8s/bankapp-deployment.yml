@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: bankapp
+    namespace: bankapp
+    labels:
+      app: bankapp
+
+spec:
+  selector:
+    matchLabels:
+      app: bankapp
+  replicas: 2
+  template:
+    metadata:
+      name: bankapp-pod
+      labels:
+        app: bankapp
+    spec:
+      containers:
+      - name: bankapp
+        image: dockeradmin3001/ai-bank-app:latest
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: bankapp-configmap
+          - secretRef:
+              name: bankapp-secret
+      
+
+
+                          
